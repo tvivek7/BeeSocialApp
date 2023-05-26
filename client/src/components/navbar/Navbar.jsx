@@ -7,21 +7,19 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, NavLink, Navigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
-// import { withCookies, Cookies } from 'react-cookie';
+
 
 const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
 
-  // const handleLogout = (e) => {
-  //   cookies.removeItem('accessToken');
-  //   window.location.href = '/';
-  //   return false;
-  // }
+  const handleLogout = (e) => {
+    localStorage.clear();
+  }
 
   return (
     <div className="navbar">
@@ -42,13 +40,13 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-      <button >Logout</button>
+      <Link to="/login"><button onClick={handleLogout}>Logout</button></Link>
         <PersonOutlinedIcon />
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
           <img
-            src={currentUser.profilePic}
+            src={"/upload/" +currentUser.profilePic}
             alt=""
           />
           <span>{currentUser.name}</span>

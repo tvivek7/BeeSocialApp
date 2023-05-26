@@ -8,7 +8,7 @@ const Posts = ({userId}) => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['posts'],
     queryFn: () =>
-    makeRequest.get("/posts?userId=" +userId).then(res=>{
+    makeRequest.get("/posts?userId=" + userId).then(res=>{
       return res.data
     })
   }
@@ -21,12 +21,8 @@ console.log(data);
     ? "Something went wrong!"
     : isLoading
     ? "loading"
-    : data.map((post)=>
-      <Post post={post} key={post.id}/>
-    )}
+    : data.map((post) => <Post post={post} keys={post.id} />)}
   </div>
   );
 };
-
-
 export default Posts;
