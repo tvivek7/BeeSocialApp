@@ -11,7 +11,7 @@ const Stories = () => {
   const stories = [
     {
       id: 1,
-      name: "Vivek Tiwari",
+      name: "Shailesh Singh",
       img: "https://www.shutterstock.com/image-photo/unshaven-confident-serious-young-male-260nw-776211322.jpg",
     },
     {

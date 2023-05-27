@@ -46,7 +46,7 @@ navigate("/")
           <form>
             <input type="text" placeholder="Username"  name="username"  onChange={handleChange}/>
             <input type="password" placeholder="Password" name="password" onChange={handleChange}/>
-            {err & err}
+            {err && err}
             <button onClick={handleLogin}>Login</button>
           </form>
         </div>

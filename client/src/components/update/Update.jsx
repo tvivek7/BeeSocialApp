@@ -55,11 +55,11 @@ const Update = ({setOpenUpdate,user}) => {
         <div className="update">
         Update
         <form>
-            <label>Cover Pic</label>
+            <label>Profile Pic</label>
             <br/>
             <input type="file" onChange={e=> setCover(e.target.files[0])}/>
             <hr/>
-            <label>Profile Pic</label>
+            <label>Cover Pic</label>
             <br/>
             <input type="file" onChange={e=> setProfile(e.target.files[0])}/>
             <hr/>
