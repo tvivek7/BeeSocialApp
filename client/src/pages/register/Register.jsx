@@ -44,13 +44,12 @@ console.log(err)
         <div className="right">
           <h1>Register</h1>
           <form>
-            <input type="text" placeholder="Username" name="username" onChange={handleChange} name="username" onChange={handleChange}/>
-            <input type="email" placeholder="Email" name="email" onChange={handleChange} name="email" onChange={handleChange} />
-            <input type="password" placeholder="Password"name="password" onChange={handleChange} name="password" onChange={handleChange} />
-            <input type="text" placeholder="Name" name="name" onChange={handleChange} name="name" onChange={handleChange}/>
-            {err & err}
+            <input type="text" placeholder="Username"   name="username" onChange={handleChange}/>
+            <input type="email" placeholder="Email"   name="email" onChange={handleChange} />
+            <input type="password" placeholder="Password"   name="password" onChange={handleChange} />
+            <input type="text" placeholder="Name"  name="name" onChange={handleChange}/>
             {err && err}
-            <button onClick={handleClick} onClick={handleClick}>Register</button>
+            <button onClick={handleClick} >Register</button>
           </form>
         </div>
       </div>
